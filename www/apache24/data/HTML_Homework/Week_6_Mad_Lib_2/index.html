@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+        <title>Week 6 Mad Libs 2</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="glass">
+                <h1>Mad Libs</h1>
+
+                <ul>
+                    <input placeholder="Verb" type="text" id="verb1"><br/>
+                    <input placeholder="Noun" type="text" id="noun1"><br/>
+                    <input placeholder="Adverb" type="text" id="adverb1"><br/>
+                    <input placeholder="Verb (past tense)" type="text" id="verb2"><br/>
+                    <input placeholder="Plural Noun" type="text" id="pnoun1"><br/>
+                    <input placeholder="Plural Noun" type="text" id="pnoun2"><br/>
+                    <input placeholder="Adjective" type="text" id="adjective1"><br/>
+                    <input placeholder="Plural Noun" type="text" id="pnoun3"><br/>
+                    <input placeholder="Verb ending in -ing" type="text" id="verb3"><br/>
+                    <input placeholder="Color" type="text" id="color"><br/>
+                    <input placeholder="Plural Noun" type="text" id="pnoun4"><br/>
+                    <input placeholder="Noun" type="text" id="noun2"><br/>
+                    <input placeholder="Noun" type="text" id="noun3"><br/>
+                    <input placeholder="Interjection" type="text" id="interjection1"><br/>
+                    <input placeholder="Adjective" type="text" id="adjective2"><br/>
+                    <input placeholder="Verb" type="text" id="verb4"><br/>
+                    <input placeholder="Adjective" type="text" id="adjective3"><br/>
+                    <input placeholder="Adjective" type="text" id="adjective4"><br/>
+                </ul>
+            
+                <button id="lib-button">Generate Mad Lib</button>
+            
+                <p>Generated Story:</p>
+                <p class="output"><span id="story"></span></p>
+            
+                <script>
+                    /* Sets the button */
+                    var libbutton = document.getElementById('lib-button');
+                    var generate = function()
+                    {
+                        /* Assigns the values entered to variables */
+                        var verb1 = document.getElementById('verb1').value;
+                        var noun1 = document.getElementById('noun1').value;
+                        var adverb1 = document.getElementById('adverb1').value;
+                        var verb2 = document.getElementById('verb2').value;
+                        var pnoun1 = document.getElementById('pnoun1').value;
+                        var pnoun2 = document.getElementById('pnoun2').value;
+                        var adjective1 = document.getElementById('adjective1').value;
+                        var pnoun3 = document.getElementById('pnoun3').value;
+                        var verb3 = document.getElementById('verb3').value;
+                        var color = document.getElementById('color').value;
+                        var pnoun4 = document.getElementById('pnoun4').value;
+                        var noun2 = document.getElementById('noun2').value;
+                        var noun3 = document.getElementById('noun3').value;
+                        var interjection1 = document.getElementById('interjection1').value;
+                        var adjective2 = document.getElementById('adjective2').value;
+                        var verb4 = document.getElementById('verb4').value;
+                        var adjective3 = document.getElementById('adjective3').value;
+                        var adjective4 = document.getElementById('adjective4').value;
+
+                        /* Creates Variable called storyDiv and sets it equal to an element from the HTML Doc */
+                        var storyDiv = document.getElementById("story");
+
+                        /* Sets the storyDiv element equal the story with all of the user input hardcoded into the story. The story cant change, I can probably make it to change, but that is a little bit too much work. */
+                        storyDiv.innerHTML = "O say can you " + verb1 + " by the dawn's eary " + noun1 + 
+                        ", What so " + adverb1 + " we " + verb2 + " at the twilight's last gleaming, Whose broad " 
+                        + pnoun1 + " and bright " + pnoun2 + " through the " + adjective1 + " fight, O'er the " +
+                        pnoun3 + " we watched, were so gallantly " + verb3 + "? And the rockets' " + color +
+                        " glare, the " + pnoun4 + " bursting in " + noun2 + ", Gave proof through the night that our "
+                        + noun3 + " was stil there; " + interjection1 + " does that " + adjective3 + " banner yet "
+                        + verb4 + ", O'er the land of the " + adjective3 + " and the home of the " + adjective4 + ".";
+                    };
+                    /* When button is pressed, the script prints out the above story. */
+                    libbutton.addEventListener('click', generate)
+                </script>
+            </div>
+        </div>
+    </body>
+    <footer>This page was made by <font color=C41D0A>P</font>eter Strizhev on 18-Feb-2020</footer>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 5 Mad Libs</title>
+    </head>
+    <body>
+        <h1>Results of Question A</h1>
+        <ul>
+            <li>undefined</li>
+            <li>false</li>
+            <li>1</li>
+            <li>Wanda Smith</li>
+            <li>52</li>
+        </ul><br><br>
+        <h1>Question B</h1>
+        <ul>
+            <li>Java is first compiled into class files, then executed by JVM, whereas javascript is directly executed by the browser.</li>
+            <li>+ is an operator that signifies the addition of two variables, whereas the ++ operator (when in front of a variable) increments that variable (if it is not a string or bool variable) by 1</li>
+            <li>log() outputs whatever is passed as the parameter<br>write() adds whatever you want to html<br>alert() is a popup alert</li>
+            <li>= assigns a value to a variable<br>== is a check to see if two values are equal<br>=== is a strict equality that compares two values, but the values have to be completely identical.</li>
+            <li>while loops are conditional, so while a parameter is true, the loop runs<br>do while loops are while loops that are executed at least once and is re-executed while the condition is true.</li>
+        </ul><br><br>
+        <h1>Coding Exercise</h1>
+        Input Name : <input id="input" onkeypress="return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122" />
+        
+        <button id="button">Generate</button>
+
+        <script>
+            var generatebutton = document.getElementById('button');
+            var generate = function()
+            {
+                var string = document.getElementById('input').value;
+                string = string.toUpperCase();
+                var tmp = string;
+                var outputStr = null;
+                for(var i = 0; i <= 2; ++i)
+                {
+                    outputStr = "Welcome " + string + "\n";
+                }
+                storyDiv.innerHTML = outputStr;
+            };
+            generatebutton.addEventListener('click', generate)
+        </script>
+    </body>
+</html>

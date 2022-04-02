@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML Semantic Elements</title>
+    <!-- backward compatibility for IE8 and below -->
+	<style>
+		section, article, nav, aside, header, footer { display: block; }
+	</style>
+	<!--[if lt IE 9]>
+		<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body style="margin-left:100px; width:600px;">
+	<header style="border:1px solid lightgray;">
+    	<img src="images/slug.jpg" alt="Washington State Gastropod">
+   		<h1>Northwest in a Nutshell</h1>
+        <h2>News About Trees and More!</h2>
+   	</header>
+    
+    <nav style="background-color:honeydew;">
+    	<ul>
+        	<li><a href="">Police Blotter</a></li>
+            <li><a href="">The Microbrewery Report</a></li>
+            <li><a href="">This Week's Tailgate Parties plus Optional Sports Events</a></li>
+            <li><a href="">Local Sleaze and Gossip</a></li>
+            <li><a href="">State of the Economy (the boring stuff)</a></li>
+       	</ul>
+   	</nav>
+    
+	<section style="border:1px solid lightgray;">
+    	<h2>The Music Scene</h2>
+        
+        <article style="background-color: linen;">
+        	<h3>Seattle Symphony to Perform Beethoven Backwards</h3>
+            <p>For a change of pace, Seattle Symphony conductor Ludovic Morlot has opted to<br>
+               play the entire Beethoven's seventh symphony backwards. "Not to worry",<br>
+               he commmented, "It'll sound exactly like something by Shostakovich."</p>
+        </article>
+        
+        <article style="background-color: linen;">
+        	<h3>Local Band Fleet Foxes to Change Name to Furry Faces</h3>
+            <p>"Everyone wears massive facial hair, that's our image", said lead singer Robin Pecknold.<br>
+                "Sure, we'll let girls in the band, but they'll have to put on fake beards."</p>
+     	</article>
+        
+        <aside style="background-color: azure;">
+        	<h4>Other Musical Happenings</h4>
+            <ul>
+            	<li>Scottish Bagpipe Orchestra in Enumclaw (you'll still hear them from Seattle)</li> 
+                <li>Yo! Rap Slammin' in Richmond Beach</li>
+                <li>Alpine Yodeling Tryouts in Leavenworth -- Ja!</li>
+           	</ul>
+        </aside>
+  	</section>
+        
+    <footer style="background-color: gainsboro;">
+    	<p><small>Copyright &copy;2016 Rick Ramble, Roving Reporter</small></p>
+        <nav>
+        	<ul>
+            	<li  style="display:inline"><a href="">Previous</a></li>
+                <li style="display:inline"><a href="">Next</a></li>
+           	</ul>
+      	</nav>
+  	</footer>
+
+</body>
+</html>

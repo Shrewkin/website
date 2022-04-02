@@ -1,0 +1,17 @@
+The first error is on line 11, the header text is surrounded by '<' and '>' this makes the text nonvisible by the viewer of the page.
+The next error is from lines 13-15, the ending tag had a '\' instead of a '/'
+Also for the entire document, a good practice is to number paragraphs just like you would number headers
+The next error is on line 17 where the author tries to define the color of tex, this should be done as follows: <em><font-color="red">Your Text Here</font></em>
+The next error is on line 21 where there is a useless <hr> tag
+Line 23 should be as follows: <div align=center>
+Line 24 should have a closing italics tag instead of two italics declaration tags
+Line 27, not really a page breaking error but the header tag should not be capitolized
+Line 29, there is a un-needed paragraph tag
+Line 30 has an incorrect closing tag, i.e. the line should end in </li> instead of <li>
+Line 32 has a </ol> tag instead of a </li> tag ending 
+Line 34 should have a </ul> tag
+Missing a closing <body> tag for the main body of the page
+Not an error but for cleaner code you can delete line 36 as it contains nothing
+Line 14 and 15 have the <em> tag beginning and ending before the main paragraph tag
+
+Some of my descriptions of errors are hard to describe so I am attaching a fixed version of the web page to this submission.

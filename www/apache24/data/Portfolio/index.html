@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Peter Strizhev</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <style type="text/css">
+            
+            *,
+            *::before,
+            *::after{
+                box-sizing: border-box;
+            }
+
+            *:focus{
+                outline: none;
+            }
+
+            body{
+                padding: 0;
+                margin: 0;
+                background: #000;
+                color: white;
+                font-family: "Oxygen", sans-serif;
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            img{
+                width: 100%;
+            }
+            .home img{
+                width: 100%;
+                -webkit-filter: grayscale(100%) contrast(100%);
+                filter: grayscale(100%) contrast(100%) brightness(60%);
+            }
+
+            .portfolio img{
+                -webkit-filter: grayscale(100%) contrast(100%);
+                filter: grayscale(100%) contrast(100%) brightness(60%);
+            }
+
+            aside{
+                position: fixed;
+                background: #222;
+                top: 0px;
+                left: 0px;
+                width: 120px;
+                height: 100%;
+                overflow: none;
+                z-index: 1;
+                text-align: center;
+                padding: 0;
+            }
+
+            aside img{
+                -webkit-filter: grayscale(100%) contrast(100%);
+                filter: grayscale(100%) contrast(100%) brightness(60%);
+            }
+
+            .material-icons.md-36 {
+                font-size: 36px;
+            }
+
+            aside a{
+                display: block;
+                padding: 15px 0px;
+                color: white;
+                transition: all 0.35s;
+                text-transform: uppercase;
+                font-size: 0.75em;
+                letter-spacing: 2px;
+            }
+
+            aside p{
+                margin: 0;
+                padding: 0;
+            }
+
+            aside a:hover{
+                background: #000;
+            }
+
+            aside nav a:nth-child(2){
+                background: #222;
+            }
+
+            aside nav a:nth-child(2):hover{
+                background: #b2b2b2;
+                color: #222;
+            }
+
+            main{
+                max-width: 1080px;
+                background: #000;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 12px 50px 12px 50px;
+            }
+
+            header{
+                text-align: center;
+                letter-spacing: 2px;
+            }
+
+            header h1{
+                font-weight: bold;
+                font-size: 4em;
+                letter-spacing: 4px;
+            }
+
+            header h5{
+                font-weight: 300;
+                font-size: 1em;
+                letter-spacing: 4px;
+                color: #b2b2b2
+            }
+
+            .about,
+            .portfolio,
+            .education,
+            .work,
+            .contact{
+                margin-top: 100px;
+                line-height: 1.5em;
+                letter-spacing: 1px;
+                font-weight: 300;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 1080px;
+                background: #000;
+                padding: 12px 50px 12px 50px;
+            }
+
+            .about h2,
+            .portfolio h2,
+            .education h2,
+            .work h2,
+            .contact h2{
+                font-weight: 300;
+                text-transform: uppercase;
+                text-decoration: underline overline;
+                padding-bottom: 10px;
+                margin: 100px 0 0 0;
+                letter-spacing: 4px;
+            }
+
+            .about p,
+            .work p,
+            .education p{
+                color: #b2b2b2;
+            }
+
+            .about span,
+            .work span,
+            .education span{
+                font-weight: 600;
+                color: white;
+            }
+
+            .about h3,
+            .work h3,
+            .education h3{
+                font-weight: 300;
+                margin: 50px 0;
+            }
+
+
+            .container{
+                width: 100%;
+                background-color: #222;
+            }
+
+            .skills{
+                text-align: right;
+                padding-right: 20px;
+                line-height: 30px;
+                color: white;
+                background-color: #424242;
+            }
+
+            .c{
+                width: 85%;
+            }
+            .python{
+                width: 80%;
+            }
+            .web{
+                width: 75%;
+            }
+            .hw{
+                width: 95%;
+            }
+            .unity{
+                width: 80%;
+            }
+            .java{
+                width: 80%;
+            }
+            .csharp{
+                width: 70%;
+            }
+
+            .portfolio h3{
+                color: white;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+
+            .portfolio p{
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 0.875em;
+            }
+
+            .row-halves{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                -webkit-flex-pack: justify;
+            }
+
+            .row-halves .col{
+                width: 49%;
+            }
+
+            .col{
+                border: 1px solid #222;
+                background: #222;
+                color: #b2b2b2;
+            }
+
+            label{
+                color: #b2b2b2;
+            }
+
+            /* Style inputs */
+            input[type=text], select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid white;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+                background-color: #222;
+                color: white;
+            }
+
+            input[type=submit] {
+                background-color: #222;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #b2b2b2;
+                color: black;
+            }
+
+            .footer{
+                border-top: 1px solid #222;
+            }
+
+            .top-bar{
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            .top-bar a{
+                margin: 10px;
+                font-size: 2em;
+                color: #b2b2b2;
+                transition: all 0.35s;
+                display: inline-block
+            }
+
+            .top-bar a:hover{
+                transform: scale(1.1);
+                color: #009688
+            }
+
+            .bottom-bar{
+                background: #000;
+                font-size: 0.75em;
+                text-align: center;
+            }
+
+            @media (max-width: 768px){
+                .row-halves{
+                    display: block;
+                }
+
+                .row-halves .col{
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                }
+            }
+            @media (max-width: 601px){
+                aside{
+                    display: none;
+                }
+
+                main{
+                    width: 100%;
+                    margin: 0 auto;
+                    padding: 12px 25px;
+                }
+
+                header{
+                    margin-top: 80px;
+                }
+                header h1{
+                    font-size: 3em;
+                    line-height: 1.4em;
+                }
+                header h5{
+                    font-size: 3em;
+                    letter-spacing: 2px;
+                }
+
+                .mobile-nav{
+                    position: fixed;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    background: rgba(0, 0, 0, 0.8);
+                    z-index: 1;
+                }
+
+                .mobile-nav a{
+                    width: 100%;
+                    color: #b2b2b2;
+                    text-transform: uppercase;
+                    font-size: 0.875em;
+                    letter-spacing: 2px;
+                    text-align: center;
+                    padding: 10px 10px;
+                    transition: all 0.35s;
+                }
+
+                 .mobile-nav a:hover{
+                     background: #b2b2b2;
+                     color: #222;
+                 }
+            }
+
+            @media (min-width: 600px){
+                .mobile-nav{
+                    display: none;
+                }
+            }
+
+            .center {
+                margin: auto;
+                width: 50%;
+                padding: 0px;
+            }
+        </style>
+
+
+
+    </head>
+    <body>
+
+        <aside>
+            <nav>
+                <img src="./images/background.jpg">
+                <a href="#home"><i class="material-icons md-36">home</i>
+                    <p>Home</p>
+                </a>
+
+                <a href="#about"><i class="material-icons md-36">person</i>
+                    <p>About</p>
+                </a>
+
+                <a href="#work"><i class="material-icons md-36">work</i>
+                    <p>Work</p>
+                </a>
+
+                <a href="#portfolio"><i class="material-icons md-36">image</i>
+                    <p>Portfolio</p>
+                </a>
+
+                <a href="#education"><i class="material-icons md-36">school</i>
+                    <p>Education</p>
+                </a>
+
+                <a href="#contact"><i class="material-icons md-36">mail</i>
+                    <p>Contact</p>
+                </a>
+
+                <a herf=#github"><i class="material-icons md-36"></i>
+                    <p>GitHub</p>
+                </a>
+            </nav>
+        </aside>
+        <nav class="mobile-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="#github">GitHub</a>
+        </nav>
+        <div class="center">
+            <main>
+                <header class="home" id="home"><br><br>
+                    <h1>Hello, I am <span style="color: red">P</span>eter Strizhev</h1>
+                    <h5>Programmer // Game Designer</h5>
+                    <img src="images/background.jpg">
+                </header>
+            </main>
+
+
+
+            <section class="about" id="about">
+                <h2>About me</h2>
+                <p>
+                    <span>Hello, I'm Peter</span>, I'm a Programmer, Game Designer, life long learner, 
+                    and always prepared for new challenges. 
+                </p>
+                <p>
+                    I believe that the key to success is optimization, 
+                    whether it be with my code, or my daily life.<br><br> I have experience with Python, C++, 
+                    C, Java, HTML, CSS, JavaScript, Rust and many other languages. I am also experienced in working 
+                    with hardware, such as high-end computers, enterprise-grade servers, and enterprise-grade networking 
+                    equipment. I believe that diversifying my interests will enable me to fit a greater quantity of job positions.
+                </p>
+
+                <h3>My Skills</h3>
+                <p>Unity</p>
+                <div class="container">
+                    <div class="skills unity">80%</div>
+                </div>
+
+                <p>C/C++</p>
+                <div class="container">
+                    <div class="skills c">85%</div>
+                </div>
+
+                <p>Java</p>
+                <div class="container">
+                    <div class="skills java">80%</div>
+                </div>
+
+                <p>C#</p>
+                <div class="container">
+                    <div class="skills csharp">70%</div>
+                </div>
+
+                <p>Python</p>
+                <div class="container">
+                    <div class="skills python">80%</div>
+                </div>
+
+                <p>HTML/CSS/JavaScript</p>
+                <div class="container">
+                    <div class="skills web">75%</div>
+                </div>
+
+                <p>Hardware</p>
+                <div class="container">
+                    <div class="skills hw">95%</div>
+                </div>
+            </section>
+            
+            
+            <section class="work" id="work">
+                <h2>Work</h2>
+                <ul>
+                    <li>PhenoPath Laboratories & Quest Diagnostics Data Management Intern (2019 - Current)</li>
+                    <p>
+                        Working on workflow optimization as well as building databases and a future proof data infrastructure 
+                        on PhenoPath's servers.
+                    </p><br>
+                    <li>Office Depot IT Support (2018 - 2019)</li>
+                    <p>
+                        Helped customers with any technical difficulties they encounter. Provided clear and concise 
+                        support when requested.
+                    </p>
+                </ul>
+            </section>
+
+
+
+            <section>
+                <section class="portfolio" id="portfolio">
+                    <h2>Portfolio</h2>
+                    <div class="row-halves">
+                        <div class="col">
+                            <img src="images/buisness.jpg">
+                            <h3>Buisness</h3>
+                            <p>
+                                Creating workflow optimization programs for Quest Diagnostics and PhenoPath Laboratories. These 
+                                programs are primarily programmed in Python, with some programs being made with R.
+                            </p>
+                        </div>
+
+                        <div class="col">
+                            <img src="images/personal.jpg">
+                            <h3>Personal</h3>
+                            <p>
+                                Working on personal projects that interest me, these projects range from being Games, to projects involving 
+                                complex Neural Networks and Generative Adversarial Networks such as StyleGAN.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+            <section class="education" id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>DigiPen Institute of Technology (Sophomore)</li>
+                    <p>CS170 (C and C++), CS230 (Game Engine Creation), MAT140 (Linear Algebra), GAM150 (C & Project Management)
+                        <br>
+                        Specialization: Programming, Mathematics, Game Design, Game Programming
+                    </p>
+                    <li>DigiPen Institute of Technology (WANIC Program Year 1 - 2)</li>
+                    <p>Comp Sci 120 – 230 (C, C++, HTML), Math 140 - 280, Computer History 120 – 230<br>
+                        Specialization: Programming & Mathematics
+                    </p>
+                    <li>DigiPen Summer Classes (WANIC Program)</li>
+                    <p>Robotics 110 (Python), Game Programming (Zilch)<br>
+                        Specialization: Programming & Hardware Design
+                    </p>
+                    <li>Skyline High School (Class of 2019)</li>
+                    <p>IB Math SL 1 & 2, IB Comp Sci SL (Java)<br>
+                        Specialization: Mathematics and Programming
+                    </p>
+                </ul>
+            </section>
+
+            <section class="contact" id="contact">
+                <div>
+                    <h2>Contact Me</h2>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <form action="mailto:strizhevp@gmail.com">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" placeholder="Your name..">
+                            <label for="email">Email</label>
+                            <input type="text" name="mail" placeholder="Your email..">
+                            <textarea id="body" name="body" placeholder="Write something.." style="height:170px"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <footer>
+                <section class="top-bar">
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                </section>
+                <section class="bottom-bar">
+                    <p>&copy 2020 | All rights reserved</p>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

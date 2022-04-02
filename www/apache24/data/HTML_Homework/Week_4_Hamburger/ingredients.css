@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.bun-top {
+  height: 75px;
+  width: 60%;
+  background: #c79d5a;
+  border-radius: 100px 100px 20px 20px;
+  border-bottom: solid 10px rgba(0,0,0,.1);
+}
+
+.cheese {
+  height: 15px;
+  width: 65%;
+  background: #f7c900;
+  border-bottom: solid 2px rgba(0,0,0,.1);
+}
+
+.tomato {
+  height: 20px;
+  width: 50%;
+  background-color: #e95635;
+  border-bottom: solid 2px rgba(0,0,0,.1);
+}
+
+.meatball {
+  height: 60px;
+  width: 70px;
+  background: #74380d;
+  border-radius: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.patty {
+  height: 35px;
+  width: 65%;
+  background: #ad370b;
+  border-radius: 15px;
+  border-bottom: solid 2px rgba(0,0,0,.1);
+}
+
+.pickle {
+  height: 30px;
+  width: 50%;
+  background: #3acc81;
+  border-radius: 0 0 100px 100px;
+  border-bottom: solid 10px #2d9961;
+}
+
+.onion {
+  width: 40%;
+  background-color: #a44bbe;
+  border-top: dotted 20px rgba(255,255,255,.2);
+}
+
+.bun-bottom {
+  height: 40px;
+  width: 60%;
+  background: #c79d5a;
+  border-radius: 20px 20px 40px 40px;
+  border-top: solid 8px rgba(0,0,0,.1)
+}
+
+.plate {
+  height: 25px;
+  width: 80%;
+  background: #acacac;
+  border-radius: 20px 20px 200px 200px;
+}
+
+
+
+
+
+.bun-top-reverse {
+  height: 70px;
+  width: 60%;
+  background: #3862A5;
+  border-radius: 100px 100px 20px 20px;
+  border-bottom: solid 10px rgba(0,0,0,.1);
+}
+
+
+.cheese-reverse {
+  height: 15px;
+  width: 65%;
+  background: #0836FF;
+  border-bottom: solid 2px rgba(0,0,0,.1);
+}
+
+.tomato-reverse {
+  height: 20px;
+  width: 50%;
+  background-color: #16A9CA;
+  border-bottom: solid 2px rgba(0,0,0,.1);
+}
+
+.patty-reverse {
+  height: 35px;
+  width: 65%;
+  background: #52C8F4;
+  border-radius: 15px;
+  border-bottom: solid 2px rgba(0,0,0,.1);
+}
+
+.pickle-reverse {
+  height: 30px;
+  width: 50%;
+  background: #C5337E;
+  border-radius: 0 0 100px 100px;
+  border-bottom: solid 10px #D2669E;
+}
+
+.onion-reverse {
+  width: 40%;
+  background-color: #5BB441;
+  border-top: dotted 20px rgba(255,255,255,.2);
+}
+
+
+.bun-bottom-reverse {
+  height: 40px;
+  width: 60%;
+  background: #3862A5;
+  border-radius: 20px 20px 40px 40px;
+  border-top: solid 8px rgba(0,0,0,.1)
+}

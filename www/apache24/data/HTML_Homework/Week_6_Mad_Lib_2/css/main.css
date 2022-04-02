@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+
+footer {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+h1
+{
+    text-align: center;
+}
+
+body {
+    background: url("..\\images\\background.png") no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: auto;
+    max-height: 100vh;
+    text-align: center;
+    color: black;
+    width: 80vh;
+    height: 100vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.301);
+    
+    backdrop-filter: blur(10px);
+}

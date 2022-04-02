@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+        <title>Week 5 Mad Libs</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="glass">
+                <h1>Mad Libs</h1>
+
+                <ul>
+                    <input placeholder="Adjective" type="text" id="adjective1"><br/>
+                    <input placeholder="Adjective" type="text" id="adjective2"><br/>
+                    <input placeholder="Type of Bird" type="text" id="bird"><br/>
+                    <input placeholder="Room in a House" type="text" id="room"><br/>
+                    <input placeholder="Verb (Past Tense)" type="text" id="verb1"><br/>
+                    <input placeholder="Verb" type="text" id="verb2"><br/>
+                    <input placeholder="Relative's Name" type="text" id="relative"><br/>
+                    <input placeholder="Noun" type="text" id="noun1"><br/>
+                    <input placeholder="A Liquid" type="text" id="liquid"><br/>
+                    <input placeholder="Verb ending in -ing" type="text" id="verb3"><br/>
+                    <input placeholder="Part of the body (Plural)" type="text" id="part"><br/>
+                    <input placeholder="Plural Noun" type="text" id="noun2"><br/>
+                    <input placeholder="Verb ending in -ing" type="text" id="verb4"><br/>
+                    <input placeholder="Noun" type="text" id="noun3">
+                </ul>
+            
+                <button id="lib-button">Generate Mad Lib</button>
+            
+                <p>Generated Story:</p>
+                <p class="output"><span id="story"></span></p>
+            
+                <script>
+                    var libbutton = document.getElementById('lib-button');
+                    var generate = function()
+                    {
+                        var adjective1 = document.getElementById('adjective1').value;
+                        var adjective2 = document.getElementById('adjective2').value;
+                        var bird = document.getElementById('bird').value;
+                        var room = document.getElementById('room').value;
+                        var verb1 = document.getElementById('verb1').value;
+                        var verb2 = document.getElementById('verb2').value;
+                        var relative = document.getElementById('relative').value;
+                        var noun1 = document.getElementById('noun1').value;
+                        var liquid = document.getElementById('liquid').value;
+                        var verb3 = document.getElementById('verb3').value;
+                        var part = document.getElementById('part').value;
+                        var noun2 = document.getElementById('noun2').value;
+                        var adjverb4ective1 = document.getElementById('verb4').value;
+                        var noun3 = document.getElementById('noun3').value;
+
+                        var storyDiv = document.getElementById("story");
+                        storyDiv.innerHTML = "It was a " + adjective1 + ", cold November day. I woke up to the " 
+                        + adjective2 + " smell of " + bird + " roasting in the " + room + " downstairs. I " + verb1 
+                        + " down the stairs to see if I could help " + verb2 + " the dinner. My mom said, \"See if " 
+                        + relative + " needs a fresh " + noun1 + ".\" So I carried a tray of glasses full of " + liquid 
+                        + " into the " + verb3 + " room. When I got there, I couldn't believe my " + part + "! There were " 
+                        + noun2 + " " + verb3 + " on the " + noun3 + "!";
+                    };
+                    libbutton.addEventListener('click', generate)
+                </script>
+            </div>
+        </div>
+    </body>
+
+
+
+    <footer>This page was made by <font color=C41D0A>P</font>eter Strizhev on 10-Feb-2020</footer>
+</html>

@@ -1,0 +1,13 @@
+_LICENSE=MIT TRIO
+_LICENSE_COMB=multi
+_LICENSE_NAME=Multiple (all of): MIT TRIO
+_LICENSE_PERMS=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+_LICENSE_GROUPS=
+_LICENSE_NAME_MIT =MIT license / X11 license
+_LICENSE_PERMS_MIT =dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+_LICENSE_GROUPS_MIT =COPYFREE FSF GPL OSI
+_LICENSE_DISTFILES_MIT =libxml2-2.9.10.tar.gz
+_LICENSE_NAME_TRIO =Trio License
+_LICENSE_PERMS_TRIO =dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+_LICENSE_GROUPS_TRIO =
+_LICENSE_DISTFILES_TRIO =libxml2-2.9.10.tar.gz

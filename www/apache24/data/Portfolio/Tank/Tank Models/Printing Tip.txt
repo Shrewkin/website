@@ -1,0 +1,2 @@
+For best results print at a 0.12mm layer height with 100% infill.
+Also for best results, print the tanks upright.

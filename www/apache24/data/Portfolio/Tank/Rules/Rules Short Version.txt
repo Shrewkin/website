@@ -1,0 +1,63 @@
+!DISCLAIMER!----------------------------------------------------------------------------------------------------------------------------------------
+- This board game is in development by Peter Strizhev and is under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+- This roughly means that you are free to:
+---- Share, copy and redistribute the materials in any medium or format
+---- Adapt, remix, transform, and build upon the material
+---- I as the licensor cannot revoke these freedoms as long as YOU follow the license terms.
+- The above conditions are valid under the following terms:
+---- If you share, copy and redistribute the licensed materials, you must give appropriate credit, provide a link to the license, and indicate if changes were made.
+-------- You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+---- You may not use the material for commercial purposes.
+---- If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+---- You may not apply legal terms or technological measures that legally restricts others from doing anything the license permits.
+!DISCLAIMER OVER!-----------------------------------------------------------------------------------------------------------------------------------
+
+Things you will need to play:
+    A pen
+    A ruler
+    6-sided dice
+    A surface to play on
+    1 piece of paper per person playing
+    3D printed tanks (stl files included under the Tank Models folder) (If you do not own a 3d printer, you can use just printed pictures of the tanks)
+
+General Note:
+    This game requires that both players communicate their actions and moves to each other.
+    This encourages players to adopt strategies to counter their opponents play styles.
+    I also suggest that each player writes down the status of their tanks. So if an opponent aims at your tank, you will mark that a tank is being aimed at.
+        The easiest way to do this is to play on a surface you can write on and just write the current HP, reload status, aiming status, etc. of the tank on the play field.
+        If this is something that is unavailable you can just use a piece of paper to jot down notes on the status of each tank.
+
+Rules:
+    * To start the game find a flat surface
+    * Teams are separated by faction, please refer to stat cards included for more details on the tanks and what faction they belong to (shown at the top)
+    * Each player will place their tanks as shown in figure 1 (see Figure 1 located in the Example Images folder for reference, i am still figuring out how to explain this in writing)
+    * Each tank has its own stats (shown their respective stat card) A breakdown of the stats is as follows:
+        # HP - Hull Points - This is the health of the tank, so if the tank is hit, damage is dealt to HP equal to the total damage minus the tanks AP. So if a tank is hit, HP = HP - (Damage - AP)
+        # AP - Armor Points - This is the tanks armor, this is how much damage the tank can take before it lowers the tanks HP
+        # Damage - This is the damage that a tank can deal to an opponent. It is given as a range and has a minimum value, and max value.
+            Every time you 'shoot' at an opponent, roll a dice, if the number is in between the given range, then that is how much damage you deal to the opponent.
+            If the number rolled is lower than the minimum, then the damage dealt is the minimum damage value listed on the stat card.
+            If the number rolled is higher than the maximum, then the damage dealt is the maximum damage value listed on the stat card.
+        # EDR - Effective Damage Range - This range (in centimeters) is the range at which the damage dealt by the tank is halved. So whatever you roll for damage, divide by half.
+            If an opponent is closer than this range, then the tank deals damage equal to your damage roll.
+        # Max Range - This is the maximum engagement range of the tank, if the distance between a given tank and an opponent is greater than this range, no damage can be dealt.
+        # Commander Points - This is a bit complex, but imagine that the commander points are a currency that you can spend on various actions that the tank can perform.
+            These actions are as follows:
+                * Shooting - 2 Points
+                    # You shoot at your opponent, assuming that they are within the max range.
+                    # You will roll a dice to calculate damage (described above) and the damage will be dealt to the chosen target
+                * Reloading - 1 Point
+                    # This is a required action that needs to be performed after every shot.
+                * Moving - 1 Point per cm traveled
+                    # You can move a given tank in any direction
+                    # Example: If your tank has 3 Commander Points, that tank can travel at most 3cm per turn.
+                * Repairing - 3 Commander Points
+                    # This action can be performed on damaged tanks
+                    # This action will restore 2 HP
+                * Aiming - 3 Points
+                    # This is a required action that needs to be done by only Tank Destroyers before shooting at an opponent.
+                    # When aiming at an opponent, you will have to communicate with to your opponent what tank you are aiming at.
+    * If you aim at a target with a tank destroyer, you will maintain a lock on that enemy until you shoot (assuming your opponents tank stays within the max range)
+    * When measuring range, you will measure it from the front right corner of one tank to another, shown in Figure 2
+    * The game ends when either a player forfeit or a player has no tanks left on the play field.
+    * Also if you find that the rules above don't really work or need adjustment, please adjust them as you see fit within reason. Have fun in altering this game and finding game modes that work best for you.
